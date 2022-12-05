@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+}
+
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+.main {
+
+    margin: 0 auto;
+    position: fixed;
+    min-height: 15vh;
+    background: linear-gradient(#051729, #051729);
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: transparent;
+	padding: 0 12%;
+	transition: all .50s ease;
+    background-color: #F8F9FA;
+}
+
+.logo {
+    width: 100px;
+    display: flex;
+	align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav .mynav {
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+nav .menu {
+    display: flex;
+    list-style: none;
+}
+
+nav .menu li {
+    display: inline-block;
+}
+
+nav .menu li a {
+    display: inline-block;
+    color: #051729;
+    margin-left: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .menu li a:hover {
+    color: #1ba1b3;
+    transition: .4s;
+}
+
+.container {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+
+  
+.bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+
+.bg2 {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    -webkit-filter: blur(3px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+}
+
+
+.container .welcome {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.container .welcome h1 {
+    color: #F8F9FA;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.container .welcome h3 {
+    color: #F8F9FA;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+
+
+.container .welcome button {
+    color: #051729;
+    background-color: #F8F9FA;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #F8F9FA;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container .welcome button:hover {
+    background: transparent;
+    border: 2px solid #143b61;
+    color: #143b61;
+    transition: .4s;
+}
+
+
+
+.container2 {
+    background-color: #F8F9FA;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+.container2 .welcome {
+    margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 780px) {
+    nav .mynav {
+        display: initial;
+    }
+    .click{
+    }
+    .click img{
+        position: absolute;
+    }
+    nav .menu{
+        position: absolute;
+        top: 60px;
+        right: -60%;
+        bottom: 0;
+        width: 60%;
+        height: 220px;
+        background-color: black;
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    } 
+    nav .menu li{
+        display: block;
+    }
+    nav .menu li a{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    nav .menu.open{
+        right: 0;
+    }
+}
