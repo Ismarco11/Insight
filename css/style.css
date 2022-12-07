@@ -21,25 +21,25 @@ body {
     background: linear-gradient(#051729, #051729);
 }
 
-header{
-	position: fixed;
-	width: 100%;
-	top: 0;
-	right: 0;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: transparent;
-	padding: 0 12%;
-	transition: all .50s ease;
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0 12%;
+    transition: all .50s ease;
     background-color: #F8F9FA;
 }
 
 .logo {
     width: 100px;
     display: flex;
-	align-items: center;
+    align-items: center;
 }
 
 .logo img {
@@ -89,56 +89,57 @@ nav .menu li a:hover {
     text-align: center;
     padding-top: 150px;
     padding-bottom: 120px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 
-  
-.bg {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    -webkit-filter: blur(5px);
-    /* Safari 6.0 - 9.0 */
-    filter: blur(5px);
-}
-
-.bg2 {
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-    width: 50%;
-    height: 100%;
-    -webkit-filter: blur(3px);
-    /* Safari 6.0 - 9.0 */
-    filter: blur(3px);
-}
 
 
-.container .welcome {
+
+.welcome {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
+    /* position: relative; */
+    display: grid;
 }
 
-.container .welcome h1 {
+.welcome .cover{
+    grid-column: 1/1;
+    grid-row: 1/1;
+
+}
+
+.welcome h1 {
     color: #F8F9FA;
     font-size: 80px;
     font-weight: 900;
     line-height: 1.5;
 }
 
-.container .welcome h3 {
+.welcome h3 {
     color: #F8F9FA;
     font-weight: 900;
     line-height: 1.5;
 }
 
+.welcome .bg{
+    width: 100%;
+    -webkit-filter: blur(5px);
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: top;
+}
 
 
-.container .welcome button {
+.welcome button {
     color: #051729;
     background-color: #F8F9FA;
     font-size: 16px;
@@ -151,7 +152,7 @@ nav .menu li a:hover {
     margin-top: 20px;
 }
 
-.container .welcome button:hover {
+.welcome button:hover {
     background: transparent;
     border: 2px solid #143b61;
     color: #143b61;
@@ -160,28 +161,135 @@ nav .menu li a:hover {
 
 
 
-.container2 {
+.news {
     background-color: #F8F9FA;
     text-align: center;
     padding-top: 150px;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
 }
 
-.container2 .welcome {
+
+
+
+
+.about-section { 
+    text-align: center;
+
+    background-color: #051729;
+    padding-top: 5%;
+    margin: auto;
+    position: relative;
+}
+
+.container3 .welcome {
     margin-bottom: 40px;
 }
+
+.container3 h1 {
+    color: #F8F9FA;
+}
+
+
+.about {
+    justify-content: space-between;
+    float: left;
+    margin-right: 30px;
+    padding-top: 7%;
+    padding-left: 10%;
+    height: 200px;
+    width: 40%;
+}
+
+.about h3 {
+    color: #F8F9FA;
+    font-size: 14px;
+    padding-top: 10%;
+}
+
+
+.icon {
+    width: 45%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.abouticon {
+    width: 50%;
+}
+
+.socialmedia {
+    float: left;
+    margin-top: 20%;
+}
+
+
+
+.s4 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+    background-color: #051729;
+}
+
+.container4 {
+    text-align: center;
+    width: 70%;
+    height: 400px;
+    display: inline-block;
+    margin: auto;
+}
+
+
+.container4 h1 {
+    color: #051729;
+}
+
+
+.column{
+    background-color: #F8F9FA;
+    width: 29%; 
+    display:inline-block;   
+    height: 400px; 
+    padding: 3%;
+    margin: 2%;
+}
+
+.column img{
+    margin: 10%;
+    width: 50%;
+    display:inline-block;   
+
+}
+
+.column h2{
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.column p{
+}
+
+
+
+
+
+
 
 
 @media screen and (max-width: 780px) {
     nav .mynav {
         display: initial;
     }
-    .click{
-    }
-    .click img{
+
+    .click {}
+
+    .click img {
         position: absolute;
     }
-    nav .menu{
+
+    nav .menu {
         position: absolute;
         top: 60px;
         right: -60%;
@@ -193,11 +301,13 @@ nav .menu li a:hover {
         padding: 6% 9%;
         transition: .3s right;
         border-radius: 10px;
-    } 
-    nav .menu li{
+    }
+
+    nav .menu li {
         display: block;
     }
-    nav .menu li a{
+
+    nav .menu li a {
         display: block;
         text-align: center;
         font-size: 14px;
@@ -205,7 +315,8 @@ nav .menu li a:hover {
         margin-left: 0;
         margin-bottom: 20px;
     }
-    nav .menu.open{
+
+    nav .menu.open {
         right: 0;
     }
 }
